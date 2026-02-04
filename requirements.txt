@@ -1,0 +1,6 @@
+mkdocs==1.4.*            # or latest stable
+mkdocs-material==9.*   # pick a compatible release line
+mkdocstrings
+mkdocs-minify-plugin
+mkdocs-redirects
+mkdocs-git-revision-date-localized-plugin

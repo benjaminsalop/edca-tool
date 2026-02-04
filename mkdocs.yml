@@ -1,0 +1,81 @@
+site_name: EDCA — Early Design Carbon Alternatives
+site_description: "EDCA tool: docs and reference"
+site_author: Benjamin Salop
+site_url: https://benjaminsalop.github.io/edca-tool/
+repo_url: https://github.com/benjaminsalop/edca-tool
+repo_name: GitHub
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - EDCA Overview:
+    - Architecture: architecture.md
+    - Data schema: data-schema/index.md
+    - Inputs:
+      - Control file: control-file.md
+      - Source data: source-data.md
+      - Canonical data: canonical-data.md
+      - Data representation:
+        - CSVs: csvs.md
+        - Parquets: parquets.md
+        - Pydantic: pydantic.md
+    - Implementation:
+      - Core modules:
+        - Parsing: core-modules/parse.md
+        - Load Combinations: core-modules/loads.md
+        - Span Sweeps: core-modules/spans.md
+        - System Types and Typologies: core-modules/systems.md
+        - Material Takeoffs: core-modules/takeoff.md
+        - Carbon Calculations: core-modules/carbon.md
+        - Material Rankings: core-modules/rank.md
+        - Reporting: core-modules/reporting.md
+      - Code checks:
+        - Code loader: code-checks/code-loader.md
+        - Eurocode Checks: code-checks/eurocode-checks.md
+        - ASCE Checks: code-checks/asce-checks.md
+      - Testing: testing.md
+    - Outputs:
+      - Overview: outputs/overview.md
+      - Output files: output-files.md
+      - Visualizations: visualizations.md
+  - Getting Started:
+    - Quick start: getting-started/index.md
+    - Installation: installation.md
+  - Workflow:
+    - Running EDCA: operating-edca.md
+    - Validating EDCA: validating-edca.md
+    - Examples: examples/index.md
+  - Other information:
+    - FAQ: faq.md
+    - Challenges: challenges.md
+    - Glossary: glossary.md
+    - References: references.md
+    - Acknowledgements: acknowledgements.md
+  - Developer guide: developer-guide/index.md
+
+
+theme:
+  name: material
+  language: en
+  #logo: assets/logo.png
+  #favicon: assets/favicon.ico
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - content.code.annotate
+extra_css:
+  - assets/extra.css
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings    # optional, only if you plan to auto-generate API docs
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+
