@@ -1,3 +1,3 @@
-# edca.github.io
+# EDCA Design Tool
 
-# -- In Progress --
+# -- Work In Progress --
