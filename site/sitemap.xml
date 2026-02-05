@@ -31,11 +31,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Implementation/testing/</loc>
-         <lastmod>2026-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Implementation/Code%20Checks/asce-checks/</loc>
          <lastmod>2026-02-05</lastmod>
          <changefreq>daily</changefreq>
@@ -102,6 +97,11 @@
     </url>
     <url>
          <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Implementation/Data%20Representation/Pydantic/</loc>
+         <lastmod>2026-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Implementation/Testing/testing/</loc>
          <lastmod>2026-02-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
