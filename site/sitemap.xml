@@ -16,21 +16,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Implementation/canonical-data/</loc>
-         <lastmod>2026-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Implementation/control-file/</loc>
-         <lastmod>2026-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Implementation/source-data/</loc>
-         <lastmod>2026-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Implementation/Code%20Checks/asce-checks/</loc>
          <lastmod>2026-02-05</lastmod>
          <changefreq>daily</changefreq>
@@ -82,21 +67,6 @@
     </url>
     <url>
          <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Implementation/Core%20Modules/takeoff/</loc>
-         <lastmod>2026-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Implementation/Data%20Representation/CSVs/</loc>
-         <lastmod>2026-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Implementation/Data%20Representation/Parquets/</loc>
-         <lastmod>2026-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Implementation/Data%20Representation/Pydantic/</loc>
          <lastmod>2026-02-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
