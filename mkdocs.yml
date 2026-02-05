@@ -71,8 +71,6 @@ extra_css:
   - assets/extra.css
 plugins:
   - search
-  - autorefs
-  - mkdocstrings    # optional, only if you plan to auto-generate API docs
 
 markdown_extensions:
   - admonition
