@@ -13,9 +13,9 @@ nav:
     - Architecture: EDCA Overview/architecture.md
     - Data schema: EDCA Overview/data-schema/index.md
     - Inputs:
-      - Control file: Inputs/control-file.md
-      - Source data: Inputs/source-data.md
-      - Canonical data: Inputs/canonical-data.md
+      - Control file: EDCA Overview/Inputs/control-file.md
+      - Source data: EDCA Overview/Inputs/source-data.md
+      - Canonical data: EDCA Overview/Inputs/canonical-data.md
       - Data Representation:
         - CSVs: EDCA Overview/Inputs/Data Representation/csvs.md
         - Parquets: EDCA Overview/Inputs/Data Representation/parquets.md
@@ -45,7 +45,7 @@ nav:
   - Workflow:
     - Running EDCA: Workflow/operating-edca.md
     - Validating EDCA: Workflow/validating-edca.md
-    - Examples: Workflow/examples/index.md
+    - Examples: Workflow/examples.md
   - Other Information:
     - FAQ: Other Information/faq.md
     - Challenges: Other Information/challenges.md

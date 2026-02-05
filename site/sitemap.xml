@@ -106,6 +106,36 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Inputs/canonical-data/</loc>
+         <lastmod>2026-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Inputs/control-file/</loc>
+         <lastmod>2026-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Inputs/source-data/</loc>
+         <lastmod>2026-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Inputs/Data%20Representation/csvs/</loc>
+         <lastmod>2026-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Inputs/Data%20Representation/parquets/</loc>
+         <lastmod>2026-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Inputs/Data%20Representation/pydantic/</loc>
+         <lastmod>2026-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Outputs/output-files/</loc>
          <lastmod>2026-02-05</lastmod>
          <changefreq>daily</changefreq>
