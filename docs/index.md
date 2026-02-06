@@ -1,4 +1,4 @@
-# EDCA — Early Design Carbon Alternatives — Home
+# Home
 
 > Early Design Carbon Alternatives (EDCA) — a tool to compare structural systems by material take-offs, cost and embodied carbon at early design stages.
 
@@ -7,22 +7,21 @@
 
 ---
 
-## Quick links
-
-- **Getting started** — Installation and Quick start: `Getting Started/index.md`  
-- **Run EDCA** — How to run the pipeline: `Workflow/operating-edca.md`  
-- **Data schema** — CSV / parquet / pydantic docs: `EDCA Overview/data-schema/index.md`  
-- **Developer guide** — Developer docs and code layout: `Developer Guide/index.md`
-
----
-
 ## Overview
+
+### Problems
+
+### Solutions
+
+### Use Cases and Limitations
 
 EDCA helps you:
 - parse control files and inputs
 - compute span sweeps and material take-offs
 - estimate embodied carbon and cost per m²
 - rank system families and export CSV/plots
+
+### EDCA Diagram
 
 ---
 
@@ -35,4 +34,3 @@ Use the left navigation (or tabs on top) to explore:
 - **Developer Guide** — structure, tests and contribution notes
 
 If anything looks off, open an issue or a PR on the GitHub repo linked in the header.
-
