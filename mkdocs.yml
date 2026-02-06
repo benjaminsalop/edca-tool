@@ -57,22 +57,24 @@ nav:
 
 theme:
   name: material
-  language: en
-  # Uncomment and add assets to use a logo/favicon:
-  logo: assets/logo.png      # 240×60px works well
-  favicon: assets/favicon.ico
+  custom_dir: overrides
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
+    scheme: default
+    primary: '#0b1220'    # very dark charcoal (used sparingly)
+    accent:  '#002147'    # Oxford-like blue (VERY sparing)
+  font:
+    text: "Source Serif 4, Georgia, serif"
+    code: "JetBrains Mono, monospace"
+  logo: images/logo.png   # small, neutral logo recommended
+  favicon: images/favicon.ico
   features:
-    - navigation.instant     # instant navigation
-    - navigation.tabs        # top tabs for top-level nav
-    - content.code.annotate  # annotate code blocks
+    - navigation.instant
+    - navigation.sections
+    - content.code.copy
 
 # small UI tweaks: keep your own extra.css in docs/assets
 extra_css:
-  - assets/extra.css
+  - overrides/assets/overrides.css
 
 plugins:
   - search                  # enables the search bar (Material adds it to header by default)
@@ -81,4 +83,6 @@ plugins:
 markdown_extensions:
   - admonition
   - toc:
-      permalink: true
+      permalink: false
+  - pymdownx.superfences
+  - attr_list
