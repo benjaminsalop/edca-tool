@@ -57,7 +57,7 @@ nav:
 
 theme:
   name: material
-  custom_dir: overrides
+  custom_dir: assets/overrides
   palette:
     scheme: default
     primary: '#0b1220'    # very dark charcoal (used sparingly)
