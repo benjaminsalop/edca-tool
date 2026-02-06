@@ -58,20 +58,25 @@ nav:
 theme:
   name: material
   language: en
-  #logo: assets/logo.png
-  #favicon: assets/favicon.ico
+  # Uncomment and add assets to use a logo/favicon:
+  logo: assets/logo.png      # 240×60px works well
+  favicon: assets/favicon.ico
   palette:
     - scheme: default
       primary: indigo
       accent: indigo
   features:
-    - navigation.instant
-    - navigation.tabs
-    - content.code.annotate
+    - navigation.instant     # instant navigation
+    - navigation.tabs        # top tabs for top-level nav
+    - content.code.annotate  # annotate code blocks
+
+# small UI tweaks: keep your own extra.css in docs/assets
 extra_css:
   - assets/extra.css
+
 plugins:
-  - search
+  - search                  # enables the search bar (Material adds it to header by default)
+  # optionally add other plugins if you use them (e.g. git-revision-date)
 
 markdown_extensions:
   - admonition
