@@ -74,7 +74,7 @@ theme:
 
 # small UI tweaks: keep your own extra.css in docs/assets
 extra_css:
-  - assets/overrides.css
+  - assets/overrides/overrides.css
 
 plugins:
   - search                  # enables the search bar (Material adds it to header by default)
