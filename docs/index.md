@@ -34,3 +34,5 @@ Use the left navigation (or tabs on top) to explore:
 - **Developer Guide** — structure, tests and contribution notes
 
 If anything looks off, open an issue or a PR on the GitHub repo linked in the header.
+
+-- This documentation was last updated February 2026 at 5:46PM GMT --
