@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#edca-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -295,10 +300,125 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Architecture
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#edca-code-and-foundations" class="md-nav__link">
+    EDCA Code and Foundations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edca-structure" class="md-nav__link">
+    EDCA Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="EDCA Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties-hardcoded" class="md-nav__link">
+    Properties (Hardcoded)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-code" class="md-nav__link">
+    Core Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-code" class="md-nav__link">
+    Additional Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testingvalidation" class="md-nav__link">
+    Testing/Validation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flow" class="md-nav__link">
+    Flow
+  </a>
+  
+    <nav class="md-nav" aria-label="Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-decisions" class="md-nav__link">
+    Key Decisions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations" class="md-nav__link">
+    Configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-improvements" class="md-nav__link">
+    Future Improvements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1103,6 +1223,105 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#edca-code-and-foundations" class="md-nav__link">
+    EDCA Code and Foundations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edca-structure" class="md-nav__link">
+    EDCA Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="EDCA Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties-hardcoded" class="md-nav__link">
+    Properties (Hardcoded)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-code" class="md-nav__link">
+    Core Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-code" class="md-nav__link">
+    Additional Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testingvalidation" class="md-nav__link">
+    Testing/Validation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flow" class="md-nav__link">
+    Flow
+  </a>
+  
+    <nav class="md-nav" aria-label="Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-decisions" class="md-nav__link">
+    Key Decisions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations" class="md-nav__link">
+    Configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-improvements" class="md-nav__link">
+    Future Improvements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1120,9 +1339,64 @@
   
 
 
-  <h1>Architecture</h1>
-
-
+<h1 id="edca-architecture">EDCA Architecture</h1>
+<h2 id="edca-code-and-foundations">EDCA Code and Foundations</h2>
+<ul>
+<li>EDCA runs on Python</li>
+<li>Data is in parquets</li>
+<li>Based on various other tools</li>
+<li>Various packages are listed all over</li>
+<li>Things are in .py files</li>
+<li>Data is in .parquet files</li>
+<li>Optional user inputs can be added in .csv files</li>
+<li>Key hardcoded information (schemas, code specs, properties) are in .yml files</li>
+<li>Filetypes</li>
+</ul>
+<h2 id="edca-structure">EDCA Structure</h2>
+<h3 id="inputs">Inputs</h3>
+<ul>
+<li>User-Edited Registries</li>
+<li>User-Submitted Data (CSVs)</li>
+<li>Occupancies</li>
+<li>Systems</li>
+<li>Parsers</li>
+</ul>
+<h3 id="properties-hardcoded">Properties (Hardcoded)</h3>
+<ul>
+<li>Units and Constants</li>
+<li>ASCE/EC Combinations</li>
+<li>Metadata (Registries and Data)</li>
+</ul>
+<h3 id="core-code">Core Code</h3>
+<ul>
+<li>Parse.py</li>
+<li>Loads.py</li>
+<li>Systems.py</li>
+<li>Spans.py</li>
+<li>Takeoff.py</li>
+<li>Carbon.py</li>
+<li>Rank.py</li>
+<li>Reporting.py</li>
+<li>Run_edca.py</li>
+</ul>
+<h3 id="additional-code">Additional Code</h3>
+<ul>
+<li>Code Checks</li>
+</ul>
+<h3 id="testingvalidation">Testing/Validation</h3>
+<ul>
+<li>Examples</li>
+<li>Testing</li>
+</ul>
+<h2 id="flow">Flow</h2>
+<ul>
+<li>Data procession</li>
+<li>Parser Functions</li>
+<li>CSV -&gt; Pydantic -&gt; Parquet</li>
+</ul>
+<h3 id="key-decisions">Key Decisions</h3>
+<h3 id="configurations">Configurations</h3>
+<h3 id="future-improvements">Future Improvements</h3>
 
 
 
