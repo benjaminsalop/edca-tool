@@ -72,11 +72,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#developer-guide" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -1071,8 +1066,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Developer Guide
@@ -1106,8 +1099,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -1125,8 +1116,130 @@
   
 
 
-<h1 id="developer-guide">Developer Guide</h1>
-<p>-- This page is still under construction. Check back later! --</p>
+  <h1>Developer Guide</h1>
+
+<div class="highlight"><pre><span></span><code><span class="k">-</span><span class="w"> </span><span class="sb">`edca/edca_tool/data/constants/rebar_properties.py`</span>
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>This file creates a data class for rebar specifications, as well as two dictionaries — one for ASTM, and one for Eurocode rebar properties. For each rebar type, the data class includes the specification, bar type, diameter, spacing, and units. It then calculates bar area and number of bars in one linear unit of a slab for future calculations.
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>These properties are stored within <span class="sb">`METRIC_REBAR_BY_SPEC`</span> and <span class="sb">`IMPERIAL_REBAR_BY_SPEC`</span>, where a sample row looks like:
+
+<span class="sb">    ```python</span>
+    <span class="s2">&quot;H6@250&quot;</span><span class="p">:</span> <span class="n">RebarSpec</span><span class="p">(</span>
+        <span class="n">spec</span><span class="o">=</span><span class="s2">&quot;H6@250&quot;</span><span class="p">,</span>
+        <span class="n">bar_type</span><span class="o">=</span><span class="s2">&quot;H&quot;</span><span class="p">,</span>
+        <span class="n">diameter</span><span class="o">=</span><span class="mf">6.0</span><span class="p">,</span>
+        <span class="n">diameter_unit</span><span class="o">=</span><span class="s2">&quot;mm&quot;</span><span class="p">,</span>
+        <span class="n">spacing</span><span class="o">=</span><span class="mf">250.0</span><span class="p">,</span>
+        <span class="n">spacing_unit</span><span class="o">=</span><span class="s2">&quot;mm&quot;</span><span class="p">,</span>
+        <span class="n">bar_number</span><span class="o">=</span><span class="mf">4.0</span><span class="p">,</span>
+        <span class="n">bar_number_unit</span><span class="o">=</span><span class="s2">&quot;per_m&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="sb">    ```</span>
+
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>The featured documentation of this code looks like:
+
+<span class="sb">    ```text</span>
+    This module defines standard rebar properties for both metric and imperial systems. It includes a RebarSpec
+    dataclass to encapsulate rebar specifications, and dictionaries to map rebar specs to their properties.
+
+    The data in this module is drawn from standard engineering references, including ASTM, ACI 318-19 and CRSI
+    manuals. However, there are small discrepancies between sources — especially the rough heuristic associating
+    US bar sizes with diameters measured in eighths of an inch. As such, users should verify values against
+    their specific requirements.
+
+    A sample use of this function would appear as follows:
+
+        from edca_tool.constants.rebar import lookup_rebar, UnitSystem
+        bar = lookup_rebar(&quot;H6@300&quot;, UnitSystem.METRIC)
+        print(bar.area_single_bar_mm2)           # mm^2 of one bar
+        print(bar.area_per_m_width_m2())         # m^2 of steel per meter of width
+        print(bar.area_over_width_m2(2.5))       # area in m^2 for 2.5 m width
+
+    This function will be primarily adopted in the edca_tool.code_checks module for reinforcement calculations
+    during EC or ACI code checks.
+<span class="sb">    ```</span>
+
+---
+
+<span class="gu">## Inputs</span>
+
+<span class="gu">### CSVs</span>
+
+<span class="k">-</span><span class="w"> </span><span class="sb">`edca_tool/inputs/source/presets/csvs/materials.csv`</span>
+
+<span class="sb">  ```csv</span>
+<span class="s">  material_id,family,concrete_psi,steel_ksi,density_kg_per_m3,ec_a1a3_per_m3,ec_a1a3_per_kg,ec_a4_per_ton_km,transport_km,ec_a5_per_kg,cost_per_m3,cost_per_kg</span>
+<span class="s">  concrete,concrete,4000,(blank),2400,330,0.138,0.06,50,0.005,120,0.05</span>
+<span class="sb">  ```</span>
+
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>This file has materials properties, flags, and carbon and cost data.
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Note that the prices and unit values are all metric — this may be changed in the future.
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Carbon and cost values are in 2025 EUR and kg/m² (which will be converted based on contemporary exchange rates).
+
+<span class="k">-</span><span class="w"> </span><span class="sb">`edca_tool/inputs/source/presets/csvs/occupancies.csv`</span>
+
+<span class="sb">  ```csv</span>
+<span class="s">  use,unit,sdl,sdl_partition,ll,code,notes</span>
+<span class="s">  Residential_US,imperial,0,15,40,ASCE,&quot;ASCE 7-22 Table 4.3-1 L=40 psf; SDL per actual materials (not prescribed).&quot;</span>
+<span class="sb">  ```</span>
+
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>The occupancies spreadsheet features the loading prescribed by the US and European building codes corresponding to various occupancy types.
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Units are standardized based on the code preference (thus psf or kg/m²), and are called by the functions in early stages of the tool.
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Including roof loading, not weather loading.
+
+  <span class="gs">**ASCE Loading (psf)**</span>
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Residential — 40
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Office — 50
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Assembly
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Fixed Seats — 60
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Lobbies — 100
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Movable Seats — 100
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Other — 100
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Corridors (Including Occupied Roofs) — 100
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Higher Floor Corridors — 80
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Balconies/Decks — 1.5LL up to 100
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Garages — 40
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Hospitals (Laboratories) — 60
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Libraries — 60–80
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Roofs (Unoccupied) — 20
+
+  <span class="gs">**EC Loading (kN/m²)**</span>
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Residential (A) — 1.5–2
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Office (B) — 2–3
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Congregation (C)
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Tables (C1) — 2–3
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Fixed Seats (C2) — 3–4
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Corridors (C3) — 3–5
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Movable Seats (C4) — 4.5–5
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Lobbies/Other (C5) — 5–7.5
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Shopping (D) — 4–5
+
+<span class="k">-</span><span class="w"> </span><span class="sb">`edca_tool/inputs/source/presets/csvs/systems.csv`</span>
+
+<span class="sb">  ```csv</span>
+<span class="s">  component,system_id,category,type,span_behavior,manufacturer,unit,length,width,slab_depth,beam_depth,screed_depth,steel_depth,swt,sdl,ll,max_span,material_concrete_id,material_pt_id,material_steel_id,material_timber_id,ebc_mm,beam_ref,concrete_volume,steel_volume,floor</span>
+<span class="s">  bison_bb_ij1,precast,beam_block,one-way,bison,metric,0.125,0.15,0.1,1.86,1.8,1.5,4.1,concrete,pt,(blank),(blank),525,IJ1,0.0775,0.0372,</span>
+<span class="sb">  ```</span>
+
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>This file is the primary source of structural data for the larger edca tool.
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>It contains the tool’s “spine” — made of <span class="sb">`system_id`</span>, <span class="sb">`type`</span>, and <span class="sb">`category`</span> — which are used to categorize and classify each row into certain groupings.
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>In addition, <span class="sb">`systems.csv`</span> holds data on the properties of each system brand and type, including depths, weights, and maximum spans.
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>The material flags link to specific materials used for each, and volume.
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>This file is called by various functions within the tool, and thus should be altered as little as possible.
+
+---
+
+<span class="gu">### Load YAML files</span>
+
+<span class="k">-</span><span class="w"> </span><span class="sb">`edca_tool/inputs/source/presets/yaml/load_combinations.yaml`</span>
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>All load combinations featured in EC1990 or ASCE7-22 are featured in this file, given the alternatives and variations between combinations (in addition to the need to consider variations between each when various wind/snow/rain/other loads are included).
+
+<span class="k">-</span><span class="w"> </span><span class="sb">`edca_tool/inputs/source/presets/yaml/load_values.yaml`</span>
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>The <span class="sb">`load_values`</span> file is an essential component of Ultimate and Serviceability State Design under Eurocode-governed structures, while being optional but useful for ASCE design.
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>This file includes combination factors (gamma values) and load reduction factors (psi values) which will be used to create load combinations based on occupancy load cases.
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>It also includes area reduction parameters based on EN1990.
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>While the load case factor sets for US code design are also included in this file, they are not necessary due to simultaneously being hard-coded into the <span class="sb">`load_cominations.yaml`</span> file.
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>In future updates, live-load reduction files will be added to this set.
+</code></pre></div>
 
 
 
