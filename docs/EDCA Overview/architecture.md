@@ -57,9 +57,15 @@
 
 ### Key Decisions
 
+- IDK
+
 ### Configurations
 
+- Control file?
+
 ### Future Improvements
+
+- IDK
 
 
 

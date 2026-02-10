@@ -19,7 +19,7 @@ nav:
       - Data Representation:
         - CSVs: EDCA Overview/Inputs/Data Representation/csvs.md
         - Parquets: EDCA Overview/Inputs/Data Representation/parquets.md
-        - Pydantic: EDCA Overview/Inputs/Data Representation/pydantic.md
+        - Yaml: EDCA Overview/Inputs/Data Representation/yaml.md
     - Implementation:
       - Core Modules:
         - Parsing: EDCA Overview/Implementation/Core Modules/parse.md
