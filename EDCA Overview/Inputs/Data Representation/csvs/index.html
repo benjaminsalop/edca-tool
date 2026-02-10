@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#csvs-in-the-edca-tool" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -423,10 +428,97 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CSVs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         CSVs
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting" class="md-nav__link">
+    Formatting
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    Naming Conventions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapping-to-schemas" class="md-nav__link">
+    Mapping to Schemas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing" class="md-nav__link">
+    Editing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputtingoperating" class="md-nav__link">
+    Inputting/Operating
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -453,8 +545,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../pydantic/" class="md-nav__link">
-        Pydantic
+      <a href="../yaml/" class="md-nav__link">
+        Yaml
       </a>
     </li>
   
@@ -1107,6 +1199,77 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting" class="md-nav__link">
+    Formatting
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    Naming Conventions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapping-to-schemas" class="md-nav__link">
+    Mapping to Schemas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing" class="md-nav__link">
+    Editing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputtingoperating" class="md-nav__link">
+    Inputting/Operating
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1124,9 +1287,45 @@
   
 
 
-  <h1>CSVs</h1>
-
-
+<h1 id="csvs-in-the-edca-tool">CSVs in the EDCA Tool</h1>
+<h2 id="purpose">Purpose</h2>
+<ul>
+<li>ALlowing user input</li>
+<li>Being super accessible and understandable format</li>
+<li>Everyone can use excel or googlesheets</li>
+</ul>
+<h2 id="formatting">Formatting</h2>
+<ul>
+<li>Do it right following the template</li>
+</ul>
+<h3 id="naming-conventions">Naming Conventions</h3>
+<ul>
+<li>Required columns</li>
+<li>Numeric vs non/numeric data</li>
+</ul>
+<h3 id="mapping-to-schemas">Mapping to Schemas</h3>
+<ul>
+<li>Schemas (.yaml files) are linked</li>
+<li>Use them for the order and naming of each column</li>
+<li>That way pydantic will be easy</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ul>
+<li>It's easy to edit just do it right</li>
+</ul>
+<h3 id="editing">Editing</h3>
+<ul>
+<li>Using schemas as a baseline</li>
+<li>Copying the data in there</li>
+<li>Making sure everything follows preset units</li>
+</ul>
+<h3 id="inputtingoperating">Inputting/Operating</h3>
+<ul>
+<li>Make sure it maps to schemas</li>
+<li>Put in specific folder filepaths</li>
+<li>Make sure it's in there (and either commit it or leave it updated)</li>
+<li>Don't change column names or placement</li>
+</ul>
 
 
 

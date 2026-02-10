@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Implementation/Core%20Modules/parse/">
       
       
-        <link rel="prev" href="../../../Inputs/Data%20Representation/pydantic/">
+        <link rel="prev" href="../../../Inputs/Data%20Representation/yaml/">
       
       
         <link rel="next" href="../loads/">
@@ -73,6 +73,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#carbon-intensity-calculations-parsepy" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -441,8 +446,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Inputs/Data%20Representation/pydantic/" class="md-nav__link">
-        Pydantic
+      <a href="../../../Inputs/Data%20Representation/yaml/" class="md-nav__link">
+        Yaml
       </a>
     </li>
   
@@ -533,10 +538,124 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Parsing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Parsing
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exports" class="md-nav__link">
+    Exports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-pipeline" class="md-nav__link">
+    Code Pipeline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataclasses" class="md-nav__link">
+    Dataclasses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    Constraints
+  </a>
+  
+    <nav class="md-nav" aria-label="Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#areas-for-improvement" class="md-nav__link">
+    Areas for Improvement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-cases" class="md-nav__link">
+    Edge Cases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1107,6 +1226,104 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exports" class="md-nav__link">
+    Exports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-pipeline" class="md-nav__link">
+    Code Pipeline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataclasses" class="md-nav__link">
+    Dataclasses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    Constraints
+  </a>
+  
+    <nav class="md-nav" aria-label="Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#areas-for-improvement" class="md-nav__link">
+    Areas for Improvement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-cases" class="md-nav__link">
+    Edge Cases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1124,9 +1341,44 @@
   
 
 
-  <h1>Parsing</h1>
-
-
+<h1 id="carbon-intensity-calculations-parsepy">Carbon Intensity Calculations (parse.py)</h1>
+<h2 id="purpose">Purpose</h2>
+<ul>
+<li>parse the control file</li>
+</ul>
+<h3 id="inputs">Inputs</h3>
+<ul>
+<li>control file</li>
+<li>key parameters</li>
+</ul>
+<h3 id="exports">Exports</h3>
+<ul>
+<li>functions and variables representing the parsed control file</li>
+</ul>
+<h3 id="code-pipeline">Code Pipeline</h3>
+<ul>
+<li>things are inputted</li>
+<li>they're separated using a read yaml function</li>
+<li>they are assigned certain values</li>
+<li>they're used later on all over</li>
+</ul>
+<h2 id="structure">Structure</h2>
+<h3 id="functions">Functions</h3>
+<h3 id="dataclasses">Dataclasses</h3>
+<ul>
+<li>control file dataclass</li>
+<li>all of the rlevant data necessary is in this class</li>
+</ul>
+<h2 id="constraints">Constraints</h2>
+<ul>
+<li>very strict parsing</li>
+<li>doesn't raise enough errors</li>
+</ul>
+<h3 id="areas-for-improvement">Areas for Improvement</h3>
+<ul>
+<li>defensive code?</li>
+</ul>
+<h3 id="edge-cases">Edge Cases</h3>
 
 
 

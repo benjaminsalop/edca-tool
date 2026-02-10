@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#inputs-control-file" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -352,10 +357,91 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Control file
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Control file
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#control-file-function" class="md-nav__link">
+    Control File Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-components" class="md-nav__link">
+    Required Components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-data" class="md-nav__link">
+    Optional Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults-overrides-and-assumptions" class="md-nav__link">
+    Defaults, Overrides, and Assumptions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-the-control-file" class="md-nav__link">
+    Editing the Control File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes-and-errors" class="md-nav__link">
+    Common Mistakes and Errors
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -451,8 +537,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Data%20Representation/pydantic/" class="md-nav__link">
-        Pydantic
+      <a href="../Data%20Representation/yaml/" class="md-nav__link">
+        Yaml
       </a>
     </li>
   
@@ -1105,6 +1191,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#control-file-function" class="md-nav__link">
+    Control File Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-components" class="md-nav__link">
+    Required Components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-data" class="md-nav__link">
+    Optional Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults-overrides-and-assumptions" class="md-nav__link">
+    Defaults, Overrides, and Assumptions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-the-control-file" class="md-nav__link">
+    Editing the Control File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes-and-errors" class="md-nav__link">
+    Common Mistakes and Errors
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1122,9 +1273,48 @@
   
 
 
-  <h1>Control file</h1>
-
-
+<h1 id="inputs-control-file">Inputs: Control File</h1>
+<h2 id="control-file-function">Control File Function</h2>
+<ul>
+<li>The Control File governs everything else in the document</li>
+<li>Parameters are parsed from this document</li>
+<li>It includes defaults for future data, so it's necessary to have a complete CF without any missing data</li>
+<li>It's parsed in parse.py and translated over to other data</li>
+</ul>
+<h2 id="structure">Structure</h2>
+<ul>
+<li>Screenshots of the Control File</li>
+<li>Key parameters in the CF</li>
+<li>What each function does</li>
+<li>Comments next to each parameter</li>
+</ul>
+<h3 id="required-components">Required Components</h3>
+<ul>
+<li>Key examples</li>
+</ul>
+<h3 id="optional-data">Optional Data</h3>
+<ul>
+<li>Key examples</li>
+</ul>
+<h3 id="defaults-overrides-and-assumptions">Defaults, Overrides, and Assumptions</h3>
+<ul>
+<li>How the CF treats blank values</li>
+<li>How the CF assumes for stuff like area or alternatives</li>
+<li>The CF's relationship to units</li>
+</ul>
+<h2 id="editing-the-control-file">Editing the Control File</h2>
+<ul>
+<li>How to open the control file</li>
+<li>Where to edit the control file</li>
+<li>Putting in new values (it's basically just copy and paste)</li>
+</ul>
+<h2 id="common-mistakes-and-errors">Common Mistakes and Errors</h2>
+<ul>
+<li>Non-numeric parameters</li>
+<li>Typos</li>
+<li>Raising error messages</li>
+<li>Going back to the template</li>
+</ul>
 
 
 

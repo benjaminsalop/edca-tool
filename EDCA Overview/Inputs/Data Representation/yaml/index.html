@@ -12,7 +12,7 @@
         <meta name="author" content="Benjamin Salop">
       
       
-        <link rel="canonical" href="https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Inputs/Data%20Representation/pydantic/">
+        <link rel="canonical" href="https://benjaminsalop.github.io/edca-tool/EDCA%20Overview/Inputs/Data%20Representation/yaml/">
       
       
         <link rel="prev" href="../parquets/">
@@ -25,7 +25,7 @@
     
     
       
-        <title>Pydantic - EDCA — Early Design Carbon Alternatives</title>
+        <title>Yaml - EDCA — Early Design Carbon Alternatives</title>
       
     
     
@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#yaml-files-in-the-edca-tool" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pydantic
+              Yaml
             
           </span>
         </div>
@@ -451,10 +456,70 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Yaml
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Pydantic
+        Yaml
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpretation" class="md-nav__link">
+    Interpretation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1107,6 +1172,50 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpretation" class="md-nav__link">
+    Interpretation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1124,9 +1233,28 @@
   
 
 
-  <h1>Pydantic</h1>
-
-
+<h1 id="yaml-files-in-the-edca-tool">.YAML files in the EDCA Tool</h1>
+<h2 id="purpose">Purpose</h2>
+<ul>
+<li>Allowing <em>some</em> user input but more importantly being readable without edits</li>
+<li>Being super accessible and understandable format</li>
+<li>Hardcoded some data for reference</li>
+</ul>
+<h3 id="reference">Reference</h3>
+<ul>
+<li>Just don't touch them (excluding the control file)</li>
+<li>Useful for schemas</li>
+</ul>
+<h3 id="interpretation">Interpretation</h3>
+<ul>
+<li>Interpreting the math behind certain assumptions</li>
+<li>Governing how proper codebase functions occur</li>
+<li>Transform CSVs to parquet</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ul>
+<li>Don't touch, just read</li>
+</ul>
 
 
 

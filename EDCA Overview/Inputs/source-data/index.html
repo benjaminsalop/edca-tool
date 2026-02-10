@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#source-data-in-the-edca-tool" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -366,10 +371,84 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Source data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Source data
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    Definition
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatting" class="md-nav__link">
+    Formatting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-source-data" class="md-nav__link">
+    Editing Source Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors-in-source-data" class="md-nav__link">
+    Errors in Source Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -451,8 +530,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Data%20Representation/pydantic/" class="md-nav__link">
-        Pydantic
+      <a href="../Data%20Representation/yaml/" class="md-nav__link">
+        Yaml
       </a>
     </li>
   
@@ -1105,6 +1184,64 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    Definition
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatting" class="md-nav__link">
+    Formatting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-source-data" class="md-nav__link">
+    Editing Source Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors-in-source-data" class="md-nav__link">
+    Errors in Source Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1122,9 +1259,40 @@
   
 
 
-  <h1>Source data</h1>
-
-
+<h1 id="source-data-in-the-edca-tool">Source Data in the EDCA Tool</h1>
+<h2 id="definition">Definition</h2>
+<ul>
+<li>Source vs Canonical Data</li>
+</ul>
+<h3 id="purpose">Purpose</h3>
+<ul>
+<li>Allowing user-defined data</li>
+<li>Keeping backup from tool origins</li>
+</ul>
+<h3 id="formatting">Formatting</h3>
+<ul>
+<li>Correct schema</li>
+<li>Leaving hardcoded source data intact</li>
+</ul>
+<h3 id="editing-source-data">Editing Source Data</h3>
+<ul>
+<li>Numeric vs non-numeric data</li>
+<li>Data inputs</li>
+</ul>
+<h3 id="errors-in-source-data">Errors in Source Data</h3>
+<ul>
+<li>Referring back to Yaml Schemas (link to yaml)</li>
+<li>Keeping proper column headings (link to csvs)</li>
+<li>Maintaining important rows</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<ul>
+<li>Loads</li>
+<li>Bar Spacing</li>
+<li>Systems</li>
+<li>Materials</li>
+<li>Occupancy</li>
+</ul>
 
 
 
